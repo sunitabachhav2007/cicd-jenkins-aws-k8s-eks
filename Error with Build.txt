@@ -1,0 +1,87 @@
+Stage 5: Error:::::
+
+Solved by updating to AWS cli version::::
+ 
+jenkins@ip-172-31-30-151:~$ history
+    1  sudo apt install docker.io
+    2  docker --version
+    3  sudo usermod -aG docker jenkins 
+    4  sudo apt install awscli 
+    5  aws --version
+    6  aws configure 
+    7  docker ps
+    8  docker image ls
+    9  aws configure
+   10  aws configure
+   11  curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis
+   12  curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+   13  chmod +x ./kubectl 
+   14  sudo mv ./kubectl /usr/local/bin
+   15  kubectl version
+   16  curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tm
+   17  curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+   18  sudo mv /tmp/eksctl /usr/local/bin 
+   19  eksctl version
+   20  eksctl create cluster --name first-eks-cluster --version 1.25 --region us-east-1 --nodegroup-name worker-nodes --node-type t2.micro --nodes 2
+   21  eksctl create cluster --name first-eks-cluster --version 1.24 --region us-east-1 --nodegroup-name worker-nodes --node-type t2.micro --nodes 2
+   22  eksctl utils describe-stacks --region=us-east-1 --cluster=first-eks-cluster
+   23  eksctl create cluster --name first-eks-cluster --version 1.24 --region us-east-1 --nodegroup-name worker-nodes --node-type t2.micro --nodes 2
+   24  eksctl delete cluster --region=us-east-1 --name=first-eks-cluster
+   25  eksctl create cluster --name first-eks-cluster1 --version 1.24 --region us-east-1 --nodegroup-name worker-nodes --node-type t2.micro --nodes 2
+   26  ls
+   27  ls -ltr
+   28  pwd
+   29  date
+   30  docker ps
+   31  docker version
+   32  docker version
+   33  docker --version
+   34  sudo usermod -aG docker jenkins 
+   35  sudo usermod -aG docker $USER
+   36  docker version
+   37  docker build -t jhooq-docker-demo .
+   38  ls -ltr
+   39  cd /var/lib/jenkins
+   40  ls -ltr
+   41  echo $USER~
+   42  echo $USER
+
+///////////////eoor for docker.sock permission ////////////////////////////////////////
+
+   43  sudo usermod -aG docker $USER
+   44  sudo systemctl restart docker
+   45  sudo chmod 666 /var/run/docker.sock
+   46  sudo groupadd docker
+   47  docker run hello-world
+   48  sudo tail /etc/group
+   49  ls -l /var/run/docker.sock
+   50  eksctl utils write-kubeconfig --cluster=
+   51  eksctl utils write-kubeconfig --cluster=first-eks-cluster1
+   52  vi /var/lib/jenkins/.kube/config
+   53  aws eks update-kubeconfig --name ${EKS_CLUSTER_NAME} --region ${REGION}
+   54  kubectl version
+   55  aws eks update-kubeconfig --name ${EKS_CLUSTER_NAME} --region ${REGION}
+   56  aws configure
+   57  ls -ltr
+   58  aws eks update-kubeconfig --name ${EKS_CLUSTER_NAME} --region ${REGION}
+   59  aws eks update-kubeconfig --name ${EKS_CLUSTER_NAME}
+   60  kubectl version
+
+//////////////build - stage 5 error ///////////////
+
+
+   61  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+   62  unzip awscliv2.zip
+   63  sudo unzip awscliv2.zip
+   64  sudo apt install unzip
+   65  sudo unzip awscliv2.zip
+   66  sudo ./aws/install --update
+   67  echo $aws_region
+   68  echo $REGION
+   69  echo $cluster_name
+   70  kubectl get nodes
+   71  kubectl version
+   72  history
+   73  kubectl get service
+   74  history
+jenkins@ip-172-31-30-151:~$ 
