@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: springboot-new
-          image: sunitabachhav2007/sbachhav-docker-demo:sbachhav-docker-demo
+          image: sunitabachhav2007/sbachhav-docker-demo:latest
           ports:
             - containerPort: 8080
           env:
