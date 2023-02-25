@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sbachhav-springboot
+  name: jhooq-springboot
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: sbachhav-springboot
+      app: jhooq-springboot
   template:
     metadata:
       labels:
-        app: sbachhav-springboot
+        app: jhooq-springboot
     spec:
       containers:
-        - name: springboot-new
-          image: sunitabachhav2007/sbachhav-docker-demo:latest
+        - name: jhooq-springboot
+          image: sunitabachhav2007/jhooq-docker-demo:latest
           ports:
             - containerPort: 8080
           env:
@@ -24,11 +24,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: sbachhav-springboot
+  name: jhooq-springboot
 spec:
   type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8080
   selector:
-    app: sbachhav-springboot
+    app: jhooq-springboot
